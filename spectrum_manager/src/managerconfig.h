@@ -27,6 +27,8 @@
 #include <boost/assign.hpp>
 #include <boost/bind.hpp>
 
+#include "Swiften/SwiftenCompat.h"
+
 /// Represents variable:value pairs.
 typedef boost::program_options::variables_map Variables;
 
