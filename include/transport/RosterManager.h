@@ -94,15 +94,15 @@ class RosterManager {
 
 		/// Called when new Buddy is added to this roster.
 		/// \param buddy newly added Buddy
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *buddy)> onBuddySet;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *buddy)> onBuddySet;
 
 		/// Called when Buddy has been removed from this roster.
 		/// \param buddy removed Buddy
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *buddy)> onBuddyUnset;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *buddy)> onBuddyUnset;
 
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *buddy)> onBuddyAdded;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *buddy)> onBuddyAdded;
 		
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *buddy)> onBuddyRemoved;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *buddy)> onBuddyRemoved;
 
 		void handleBuddyChanged(Buddy *buddy);
 

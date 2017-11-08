@@ -35,11 +35,11 @@ class RosterResponder : public Swift::Responder<Swift::RosterPayload> {
 		RosterResponder(Swift::IQRouter *router, UserManager *userManager);
 		~RosterResponder();
 
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *, const Swift::RosterItemPayload &item)> onBuddyUpdated;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *, const Swift::RosterItemPayload &item)> onBuddyUpdated;
 
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *)> onBuddyRemoved;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *)> onBuddyRemoved;
 
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *, const Swift::RosterItemPayload &item)> onBuddyAdded;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *, const Swift::RosterItemPayload &item)> onBuddyAdded;
 
 	private:
 		virtual bool handleGetRequest(const Swift::JID& from, const Swift::JID& to, const std::string& id, SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::RosterPayload> payload);

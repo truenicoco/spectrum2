@@ -35,7 +35,7 @@ namespace Swift {
 			virtual void stop();
 			virtual void cancel();
 
-			SWIFTEN_SIGNAL_NAMESPACE::signal<void (const boost::optional<FileTransferError>&)> onFinished;
+			boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (const boost::optional<FileTransferError>&)> onFinished;
 
 		private:
 			void handleStreamInitiationRequestResponse(StreamInitiation::ref, ErrorPayload::ref);

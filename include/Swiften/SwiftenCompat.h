@@ -25,7 +25,7 @@
  *
  * Using these it is possible to declare shared pointers and signals like this:
  *
- * SWIFTEN_SIGNAL_NAMESPACE::signal signal;
+ * boost::SWIFTEN_SIGNAL_NAMESPACE::signal signal;
  * SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Type> ptr;
  *
  * These are guaranteed to be the same implementation as Swift uses internally,
@@ -39,13 +39,13 @@
 #define SWIFTEN_UNIQUE_PTR std::unique_ptr
 #define SWIFTEN_SHRPTR_NAMESPACE std
 #include <boost/signals2.hpp>
-#define SWIFTEN_SIGNAL_NAMESPACE boost::signals2
+#define SWIFTEN_SIGNAL_NAMESPACE signals2
 #define SWIFT_HOSTADDRESS(x) *(Swift::HostAddress::fromString(x))
 #else
 #define SWIFTEN_UNIQUE_PTR std::auto_ptr
 #define SWIFTEN_SHRPTR_NAMESPACE boost
 #define BOOST_SIGNALS_NO_DEPRECATION_WARNING
 #include <boost/signals.hpp>
-#define SWIFTEN_SIGNAL_NAMESPACE boost
+#define SWIFTEN_SIGNAL_NAMESPACE signal
 #define SWIFT_HOSTADDRESS(x) Swift::HostAddress(x)
 #endif

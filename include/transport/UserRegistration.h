@@ -71,15 +71,15 @@ class UserRegistration {
 
 		/// Called when new user has been registered.
 		/// \param userInfo UserInfo struct with informations about user
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (const UserInfo &userInfo)> onUserRegistered;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (const UserInfo &userInfo)> onUserRegistered;
 
 		/// Called when user has been unregistered.
 		/// \param userInfo UserInfo struct with informations about user
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (const UserInfo &userInfo)> onUserUnregistered;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (const UserInfo &userInfo)> onUserUnregistered;
 
 		/// Called when user's registration has been updated.
 		/// \param userInfo UserInfo struct with informations about user
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (const UserInfo &userInfo)> onUserUpdated;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (const UserInfo &userInfo)> onUserUpdated;
 
 	private:
 		Component *m_component;

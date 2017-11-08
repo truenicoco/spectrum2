@@ -38,7 +38,7 @@ class HTTPRequest : public Thread {
 			return m_url;
 		}
 
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onRequestFinished;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onRequestFinished;
 
 		static void globalInit() {
 			curl_global_init(CURL_GLOBAL_ALL);

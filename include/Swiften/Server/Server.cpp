@@ -95,7 +95,7 @@ void Server::stop() {
 
 	if (serverFromClientConnectionServer) {
 		serverFromClientConnectionServer->stop();
-		BOOST_FOREACH(SWIFTEN_SIGNAL_NAMESPACE::connection& connection, serverFromClientConnectionServerSignalConnections) {
+		BOOST_FOREACH(boost::SWIFTEN_SIGNAL_NAMESPACE::connection& connection, serverFromClientConnectionServerSignalConnections) {
 			connection.disconnect();
 		}
 		serverFromClientConnectionServerSignalConnections.clear();

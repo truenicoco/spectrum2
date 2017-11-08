@@ -96,15 +96,15 @@ class Frontend {
 
 		virtual bool isRawXMLEnabled() { return false; }
 
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (User *, const std::string &name, unsigned int id)> onVCardRequired;
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (User *, SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::VCard> vcard)> onVCardUpdated;
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *, const Swift::RosterItemPayload &item)> onBuddyUpdated;
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *)> onBuddyRemoved;
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *, const Swift::RosterItemPayload &item)> onBuddyAdded;
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (Swift::Message::ref message)> onMessageReceived;
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (bool /* isAvailable */)> onAvailableChanged;
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::Presence>) > onPresenceReceived;
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (const Swift::JID& jid, SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::DiscoInfo> info)> onCapabilitiesReceived;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (User *, const std::string &name, unsigned int id)> onVCardRequired;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (User *, SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::VCard> vcard)> onVCardUpdated;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *, const Swift::RosterItemPayload &item)> onBuddyUpdated;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *)> onBuddyRemoved;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *, const Swift::RosterItemPayload &item)> onBuddyAdded;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (Swift::Message::ref message)> onMessageReceived;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (bool /* isAvailable */)> onAvailableChanged;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::Presence>) > onPresenceReceived;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (const Swift::JID& jid, SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::DiscoInfo> info)> onCapabilitiesReceived;
 };
 
 }

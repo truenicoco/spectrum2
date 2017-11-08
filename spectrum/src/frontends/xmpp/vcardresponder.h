@@ -40,8 +40,8 @@ class VCardResponder : public Swift::Responder<Swift::VCard> {
 
 		void sendVCard(unsigned int id, SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::VCard> vcard);
 
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (User *, const std::string &name, unsigned int id)> onVCardRequired;
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (User *, SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::VCard> vcard)> onVCardUpdated;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (User *, const std::string &name, unsigned int id)> onVCardRequired;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (User *, SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::VCard> vcard)> onVCardUpdated;
 
 		void collectTimeouted();
 

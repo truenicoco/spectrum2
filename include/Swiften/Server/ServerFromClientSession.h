@@ -47,7 +47,7 @@ namespace Swift {
 					Swift::JID remoteJID = Swift::JID());
 			~ServerFromClientSession();
 
-			SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onSessionStarted;
+			boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onSessionStarted;
 			void setAllowSASLEXTERNAL();
 			const std::string &getUser() {
 				return user_;

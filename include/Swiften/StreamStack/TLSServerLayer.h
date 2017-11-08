@@ -35,8 +35,8 @@ namespace Swift {
 			}
 
 		public:
-			SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onError;
-			SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onConnected;
+			boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onError;
+			boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onConnected;
 
 		private:
 			TLSServerContext* context;

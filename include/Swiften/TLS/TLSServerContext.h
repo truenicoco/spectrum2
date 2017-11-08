@@ -34,9 +34,9 @@ namespace Swift {
 			virtual ByteArray getFinishMessage() const = 0;
 
 		public:
-			SWIFTEN_SIGNAL_NAMESPACE::signal<void (const SafeByteArray&)> onDataForNetwork;
-			SWIFTEN_SIGNAL_NAMESPACE::signal<void (const SafeByteArray&)> onDataForApplication;
-			SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onError;
-			SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onConnected;
+			boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (const SafeByteArray&)> onDataForNetwork;
+			boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (const SafeByteArray&)> onDataForApplication;
+			boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onError;
+			boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onConnected;
 	};
 }

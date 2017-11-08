@@ -124,10 +124,10 @@ class Config {
 		const std::string &getConfigFile() { return m_file; }
 
 		/// This signal is emitted when config is loaded/reloaded.
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onConfigReloaded;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onConfigReloaded;
 
 		void updateBackendConfig(const std::string &backendConfig);
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onBackendConfigUpdated;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onBackendConfigUpdated;
 
 		static Config *createFromArgs(int argc, char **argv, std::string &error, std::string &host, int &port);
 	

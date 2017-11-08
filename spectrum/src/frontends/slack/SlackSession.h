@@ -47,7 +47,7 @@ class SlackSession {
 
 		virtual ~SlackSession();
 
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (const std::string &user)> onInstallationDone;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (const std::string &user)> onInstallationDone;
 
 		void sendMessage(SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::Message> message);
 

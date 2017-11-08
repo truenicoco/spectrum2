@@ -34,7 +34,7 @@ class BlockResponder : public Swift::SetResponder<Transport::BlockPayload> {
 		BlockResponder(Swift::IQRouter *router, UserManager *userManager);
 		~BlockResponder();
 
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *)> onBlockToggled;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (Buddy *)> onBlockToggled;
 
 	private:
 		virtual bool handleSetRequest(const Swift::JID& from, const Swift::JID& to, const std::string& id, SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Transport::BlockPayload> payload);

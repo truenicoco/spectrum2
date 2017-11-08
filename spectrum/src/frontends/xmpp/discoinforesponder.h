@@ -52,7 +52,7 @@ class DiscoInfoResponder : public Swift::GetResponder<Swift::DiscoInfo> {
 
 		void addAdHocCommand(const std::string &node, const std::string &name);
 
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (const Swift::CapsInfo &capsInfo)> onBuddyCapsInfoChanged;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (const Swift::CapsInfo &capsInfo)> onBuddyCapsInfoChanged;
 
 		Swift::CapsInfo &getBuddyCapsInfo() {
 				return m_capsInfo;

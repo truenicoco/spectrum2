@@ -56,7 +56,7 @@ class ThreadPool
 	boost::mutex criticalregion;
 	Swift::EventLoop *loop;
 
-	SWIFTEN_SIGNAL_NAMESPACE::signal < void () > onWorkerAvailable;
+	boost::SWIFTEN_SIGNAL_NAMESPACE::signal < void () > onWorkerAvailable;
 	
 	public:
 	ThreadPool(Swift::EventLoop *loop, int maxthreads);

@@ -86,7 +86,7 @@ class NetworkConversation : public Conversation {
 			onMessageToSend(this, message);
 		}
 
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (NetworkConversation *, SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::Message> &)> onMessageToSend;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (NetworkConversation *, SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::Message> &)> onMessageToSend;
 };
 
 class NetworkFactory : public Factory {

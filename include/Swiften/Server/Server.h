@@ -59,8 +59,8 @@ namespace Swift {
 				return serverFromClientConnectionServer;
 			}
 
-			SWIFTEN_SIGNAL_NAMESPACE::signal<void (const SafeByteArray&)> onDataRead;
-			SWIFTEN_SIGNAL_NAMESPACE::signal<void (const SafeByteArray&)> onDataWritten;
+			boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (const SafeByteArray&)> onDataRead;
+			boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (const SafeByteArray&)> onDataWritten;
 
 			void addTLSEncryption(TLSServerContextFactory* tlsContextFactory, CertificateWithKey::ref cert);
 
@@ -80,7 +80,7 @@ namespace Swift {
 			NetworkFactories* networkFactories_;
 			bool stopping;
 			SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<ConnectionServer> serverFromClientConnectionServer;
-			std::vector<SWIFTEN_SIGNAL_NAMESPACE::connection> serverFromClientConnectionServerSignalConnections;
+			std::vector<boost::SWIFTEN_SIGNAL_NAMESPACE::connection> serverFromClientConnectionServerSignalConnections;
 			std::list<SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<ServerFromClientSession> > serverFromClientSessions;
 			JID selfJID;
 			StanzaChannel *stanzaChannel_;

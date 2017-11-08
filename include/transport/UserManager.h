@@ -98,11 +98,11 @@ class UserManager /*: public Swift::EntityCapsProvider*/ {
 
 		/// Called when new User class is created.
 		/// \param user newly created User class
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (User *user)> onUserCreated;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (User *user)> onUserCreated;
 
 		/// Called when User class is going to be removed
 		/// \param user removed User class
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (User *user)> onUserDestroyed;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (User *user)> onUserDestroyed;
 
 		/// Returns true if user is connected.
 		/// \return True if user is connected.

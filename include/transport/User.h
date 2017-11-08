@@ -148,12 +148,12 @@ class User {
 
 		void leaveRoom(const std::string &room);
 
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onReadyToConnect;
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (Swift::Presence::ref presence)> onPresenceChanged;
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (Swift::Presence::ref presence)> onRawPresenceReceived;
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (const Swift::JID &who, const std::string &room, const std::string &nickname, const std::string &password)> onRoomJoined;
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (const std::string &room)> onRoomLeft;
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onDisconnected;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onReadyToConnect;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (Swift::Presence::ref presence)> onPresenceChanged;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (Swift::Presence::ref presence)> onRawPresenceReceived;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (const Swift::JID &who, const std::string &room, const std::string &nickname, const std::string &password)> onRoomJoined;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (const std::string &room)> onRoomLeft;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onDisconnected;
 
 	private:
 		void onConnectingTimeout();

@@ -66,7 +66,7 @@ class TestingConversation : public Conversation {
 			onMessageToSend(this, message);
 		}
 
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (TestingConversation *, SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::Message> &)> onMessageToSend;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (TestingConversation *, SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::Message> &)> onMessageToSend;
 };
 
 class TestingFactory : public Factory {
@@ -98,7 +98,7 @@ class TestingFactory : public Factory {
 			return buddy;
 		}
 
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (TestingConversation *, SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::Message> &)> onMessageToSend;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (TestingConversation *, SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::Message> &)> onMessageToSend;
 };
 
 class TestingStorageBackend : public StorageBackend {

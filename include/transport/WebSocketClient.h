@@ -58,10 +58,10 @@ class WebSocketClient {
 
 		void write(const std::string &data);
 
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (const std::string &payload)> onPayloadReceived;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (const std::string &payload)> onPayloadReceived;
 
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onWebSocketConnected;
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void (const boost::optional<Swift::Connection::Error> &error)> onWebSocketDisconnected;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onWebSocketConnected;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (const boost::optional<Swift::Connection::Error> &error)> onWebSocketDisconnected;
 
 	private:
 		void handleDNSResult(const std::vector<Swift::HostAddress>&, boost::optional<Swift::DomainNameResolveError>);

@@ -94,10 +94,10 @@ namespace Transport {
 			/// This signal is emitted when server disconnects the transport because of some error.
 
 			/// \param error disconnection error
-			SWIFTEN_SIGNAL_NAMESPACE::signal<void (const std::string &error)> onConnectionError;
+			boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (const std::string &error)> onConnectionError;
 
 			/// This signal is emitted when transport successfully connects the server.
-			SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onConnected;
+			boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onConnected;
 
 			/// This signal is emitted when XML stanza is sent to server.
 
@@ -107,11 +107,11 @@ namespace Transport {
 			/// (for example to="j2j.domain.tld") and for presences comming to
 			/// MUC (for example to="#chat%irc.freenode.org@irc.domain.tld")
 			/// \param presence Presence.
-			SWIFTEN_SIGNAL_NAMESPACE::signal<void (Swift::Presence::ref presence)> onUserPresenceReceived;
+			boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (Swift::Presence::ref presence)> onUserPresenceReceived;
 
-			SWIFTEN_SIGNAL_NAMESPACE::signal<void (SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::IQ>)> onRawIQReceived;
+			boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void (SWIFTEN_SHRPTR_NAMESPACE::shared_ptr<Swift::IQ>)> onRawIQReceived;
 
-			SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onAdminInterfaceSet;
+			boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onAdminInterfaceSet;
 			
 			void handlePresence(Swift::Presence::ref presence);
 			void handleConnected();

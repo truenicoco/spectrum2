@@ -40,7 +40,7 @@ class MemoryReadBytestream : public Swift::ReadBytestream {
 		void setFinished() { m_finished = true; }
 		bool isFinished() const;
 
-		SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onDataNeeded;
+		boost::SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onDataNeeded;
 
 	private:
 		bool m_finished;
