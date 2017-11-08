@@ -26,7 +26,6 @@
 #include <boost/algorithm/string.hpp>
 #include <boost/assign.hpp>
 #include <boost/bind.hpp>
-#include <boost/signal.hpp>
 
 /// Represents variable:value pairs.
 typedef boost::program_options::variables_map Variables;
@@ -76,7 +75,7 @@ class ManagerConfig {
 		const std::string &getManagerConfigFile() { return m_file; }
 
 		/// This signal is emitted when config is loaded/reloaded.
-		boost::signal<void ()> onManagerConfigReloaded;
+		SWIFTEN_SIGNAL_NAMESPACE::signal<void ()> onManagerConfigReloaded;
 	
 	private:
 		Variables m_variables;

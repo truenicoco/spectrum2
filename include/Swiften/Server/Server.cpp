@@ -9,7 +9,6 @@
 #include <string>
 #include <boost/bind.hpp>
 #include <boost/foreach.hpp>
-#include <boost/signal.hpp>
 
 #include "Swiften/Base/String.h"
 #include "Swiften/Network/Connection.h"

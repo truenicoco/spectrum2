@@ -8,7 +8,6 @@
 
 #include <boost/shared_ptr.hpp>
 #include <boost/optional.hpp>
-#include <boost/signals2.hpp>
 #include <vector>
 
 #include "Swiften/Network/BoostIOServiceThread.h"
@@ -25,6 +24,7 @@
 #include "Swiften/SwiftenCompat.h"
 #include <Swiften/TLS/CertificateWithKey.h>
 #include <Swiften/Parser/PlatformXMLParserFactory.h>
+#include <Swiften/SwiftenCompat.h>
 
 namespace Swift {
 	class ConnectionServer;
@@ -59,8 +59,8 @@ namespace Swift {
 				return serverFromClientConnectionServer;
 			}
 
-			boost::signal<void (const SafeByteArray&)> onDataRead;
-			boost::signal<void (const SafeByteArray&)> onDataWritten;
+			SWIFTEN_SIGNAL_NAMESPACE::signal<void (const SafeByteArray&)> onDataRead;
+			SWIFTEN_SIGNAL_NAMESPACE::signal<void (const SafeByteArray&)> onDataWritten;
 
 			void addTLSEncryption(TLSServerContextFactory* tlsContextFactory, CertificateWithKey::ref cert);
 
