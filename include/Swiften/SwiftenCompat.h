@@ -46,6 +46,6 @@
 #define SWIFTEN_SHRPTR_NAMESPACE boost
 #define BOOST_SIGNALS_NO_DEPRECATION_WARNING
 #include <boost/signals.hpp>
-#define SWIFTEN_SIGNAL_NAMESPACE boost::signals
+#define SWIFTEN_SIGNAL_NAMESPACE boost
 #define SWIFT_HOSTADDRESS(x) Swift::HostAddress(x)
 #endif
